@@ -1,0 +1,7 @@
+.logo-container {
+  background-image: url("/assets/img/logo_light.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: local;
+}
