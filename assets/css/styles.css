@@ -1,7 +1,121 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&family=Merriweather:wght@300..900&display=swap');
+
+/* Root Variables to keep theme colors all at one place */
+:root {
+  /* Brand & Accent */
+  --brand: #77BFA3;
+  --brand-soft: #DDE7C7;
+  --accent: #BFD8BD;
+
+  /* Base & Surface */
+  --bg: #DDE7C7;
+  --surface: #EDEEC9;
+
+  /* Text Colors */
+  --text: #252528;
+  --text-muted: #77BFA3;
+  --heading: #1E4032;
+  --subheading: #5E8D7C;
+  --highlight: #BFD8BD;
+
+  /* Navigation */
+  --navbar-bg: #DDE7C7;
+  --navbar-text: #77BFA3;
+
+  /* Sections & Cards */
+  --section-bg: #EDEEC9;
+  --border: #77BFA3;
+
+  /* Interaction States */
+  --hover: #5AA382;
+  --box-shadow: rgba(20, 16, 40, 0.08);
+  --hover-shadow: rgba(20, 16, 40, 0.12);
+}
+
+:root.dark {
+  --brand: #9A93E6;
+  --brand-soft: #2A2840;
+  --accent: #CDB9F3;
+
+  --bg: #0F0F14;
+  --surface: #161622;
+  --text: #FFFFFF;
+  --text-muted: #B8B8C7;
+  --border: #2B2B3A;
+
+  --shadow: 0 8px 30px rgba(0,0,0,0.35);
+  --shadow-hover: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+/* Starting custom styles */
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--body-font);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.stretch-self {
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+nav, section {padding: 0 10%;margin-bottom: 10%;}
+
+a {text-decoration: none;color: inherit;}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+nav, button, input {
+  font-family: var(--ui-font);
+  font-weight: 500;
+}
+
+.navbar-light-cstm {
+  position: sticky;
+  top: 0;
+  min-height: 70px;
+  max-height: fit-content;
+  z-index: 10;
+  background-color: var(--surface);
+  color: var(--navbar-text);
+}
+
+.navbar-light-cstm.flex-center {justify-content: space-between;}
+
 .logo-container {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   background-image: url("/assets/img/logo_light.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: local;
+}
+
+.menu-list {
+  list-style: none;
+  gap: 25px;
 }
